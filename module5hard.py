@@ -172,6 +172,27 @@ class UrTube:
                     time.sleep(1)
                     time_now += 1
                     print(video.time_now)
+            def watch_video(self, movie):
+        if not self.current_user:
+            print("Войдите в аккаунт, чтобы смотреть видео.")
+            return
+        for selected_video in self.videos:
+            if selected_video.title == movie:
+                if selected_video.adult_mode and self.current_user.age < 18:
+                    print("Вам нет 18-ти лет, пожалуйста, покиньте страницу!")
+                    return
+
+                for i in range(selected_video.duration):
+                    p
+for i in range(selected_video.duration):
+                    print(f"{i+1}", end = ' ')
+                    sleep(1)
+                    selected_video.time_now += 1
+
+                selected_video.time_now = 0
+                print("конец видео")
+                sleep(3)
+from time import sleep
 
 
 
